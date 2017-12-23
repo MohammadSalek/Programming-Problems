@@ -1,4 +1,6 @@
-while(1==1):
+# Keymaker Tehran Regional
+
+while(True):
 
 	avali = input().split()
 	for i in range(0,2):
