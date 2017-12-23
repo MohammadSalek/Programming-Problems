@@ -1,1 +1,1 @@
-# -IOI-2017-Logo
+Solving some problems of ACM-ICPC and more :)
