@@ -2,15 +2,13 @@
 
 
 def IndexInList(list_esh, id_esh):
-
 	try:
 		Index_esh = list_esh.index(id_esh)
 		return Index_esh
 	except:
 		return -1
 
-while(1==1):
-
+while(True):
 	satra = int(input())
 	if satra == 0:
 		break
