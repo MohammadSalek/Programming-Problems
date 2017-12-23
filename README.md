@@ -1,1 +1,1 @@
-Solving some problems of ACM-ICPC and more from vjudge.net or uva.onlinejudge.org and other sources.
+Solving some problems of ACM-ICPC and other problem sets from vjudge.net, uva.onlinejudge.org or other sources.
