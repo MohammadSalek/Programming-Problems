@@ -12,7 +12,7 @@ public class problem{
     int min_to_the_end = 0;
     int previous_light_position = 0;
     int counter = 0;
-    int min_to_the_light= 0, min_redLight, min_greenLight, remainder;
+    int min_to_the_light = 0, min_redLight, min_greenLight, remainder;
     
     while(counter < lines){
         min_to_the_light = sc.nextInt();
