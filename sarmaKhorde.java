@@ -36,6 +36,5 @@ public class problem{
             }
             System.out.println(answer);
         }
-        
     }
 }
