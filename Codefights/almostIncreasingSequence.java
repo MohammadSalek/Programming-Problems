@@ -1,4 +1,4 @@
-// This shit took me 2 days to figure out.
+// This sh*t took me 2 days to figure out.
 // https://codefights.com/arcade/intro
 
 
