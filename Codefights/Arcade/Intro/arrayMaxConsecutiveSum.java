@@ -37,7 +37,7 @@ Input/Output
     [output] integer
 
     The maximal possible sum.
-/*
+*/
 
 
 int arrayMaxConsecutiveSum(int[] inputArray, int k) {
