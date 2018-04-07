@@ -1,1 +1,1 @@
-Solving some problems from various sources :)
+ A place to solve some problems from different sources :)
