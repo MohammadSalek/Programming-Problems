@@ -1,3 +1,5 @@
+package test;
+
 import java.math.BigInteger;
 import java.util.Scanner;
 
@@ -7,10 +9,12 @@ public class Main {
 		
 		int num = Integer.parseInt(sc.nextLine());
 		BigInteger bigNum;
+		BigInteger[] antworten = new BigInteger[num];
 		
 		for(int i=0; i<num; i++) {
 			bigNum = new BigInteger(sc.nextLine());
-			boolean beautyFlag = false;			
+			boolean beautyFlag = false;	
+			
 			while(!beautyFlag) {
 				bigNum = bigNum.subtract(BigInteger.ONE);
 				int digits = countDigits(bigNum);
@@ -19,8 +23,12 @@ public class Main {
 				}				
 				beautyFlag = isBeautiful(bigNum);				
 			}
-			System.out.println(bigNum);
-		}		
+			antworten[i] = bigNum;
+		}
+		
+		for(int i=0; i<num; i++) {
+			System.out.println(antworten[i]);
+		}
 	}
 
 	static BigInteger makeItEven(BigInteger num, int digits) {	
