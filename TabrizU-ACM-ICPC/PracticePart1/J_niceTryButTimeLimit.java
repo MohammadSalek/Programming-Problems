@@ -1,5 +1,3 @@
-package test;
-
 import java.math.BigInteger;
 import java.util.Scanner;
 
@@ -14,29 +12,36 @@ public class Main {
 		for(int i=0; i<num; i++) {
 			bigNum = new BigInteger(sc.nextLine());
 			boolean beautyFlag = false;	
+			int lastDigit = bigNum.mod(BigInteger.TEN).intValue();			
 			
 			while(!beautyFlag) {
 				bigNum = bigNum.subtract(BigInteger.ONE);
-				int digits = countDigits(bigNum);
-				if(digits%2 == 1) {
-					bigNum = makeItEven(bigNum, digits);
+				lastDigit--;
+				if(lastDigit == -1) {
+					bigNum = makeItEven(bigNum);
+					lastDigit = 9;
 				}				
 				beautyFlag = isBeautiful(bigNum);				
 			}
+
 			antworten[i] = bigNum;
 		}
-		
 		for(int i=0; i<num; i++) {
 			System.out.println(antworten[i]);
 		}
 	}
 
-	static BigInteger makeItEven(BigInteger num, int digits) {	
-		char[] array = new char[digits-1];
-		for(int i=0; i<digits-1; i++) {
-			array[i] = '9';
+	static BigInteger makeItEven(BigInteger num) {	
+		int digits = num.toString().length();
+		if(digits%2 == 1) {
+			char[] array = new char[digits-1];
+			for(int i=0; i<digits-1; i++) {
+				array[i] = '9';
+			}
+			return new BigInteger(new String(array));
+		}else {
+			return num;
 		}
-		return new BigInteger(new String(array));
 	}
 
 	static boolean isBeautiful(BigInteger num) {				
@@ -54,9 +59,5 @@ public class Main {
 			}
 		}
 		return true;
-	}
-	
-	static int countDigits(BigInteger number) {
-		  return number.toString().length();
 	}	
 }
